@@ -2,7 +2,7 @@
 
 import base64
 import bz2
-import m4bfile
+import m4bf
 import os.path
 import os
 
@@ -49,7 +49,7 @@ pakfiles = ["video_2", "video_3", "video_6", "video_7"]
 for k in pakfiles:
 	print("Extracting " + k)
 	pak = m4bfile.m4b_file(os.path.join(sourcedir, k + ".m4b"))
-	pak.Extract(k)
+	pak.extract(k)
 	
 # overwrite the files we need to change
 for fn in filestoblank:
